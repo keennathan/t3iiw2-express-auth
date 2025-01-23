@@ -11,6 +11,15 @@ app.use(cors());  // Enable CORS
 app.use(helmet());  // Enable Helmet
 app.use(express.json());  // Enable JSON parsing
 
+// app.verb(path, callback);
+app.get("/", (req, res) => {
+    // response.send("<h1>Hello World!</h1>");
+
+    res.json({
+        message: "Hello World!"
+    });
+});
+
 
 app.use("/api/auth", authRoutes);  // Use the authRoutes module for the /api/auth path
 
