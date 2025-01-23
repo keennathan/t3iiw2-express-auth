@@ -21,9 +21,9 @@ const PostSchema = new mongoose.Schema({
     }
 });
 
-const PostModel = mongoose.model('Post', PostSchema);  // Create a Post model from the Post schema
+const Post = mongoose.model('Post', PostSchema);  // Create a Post model from the Post schema
 
 // Export the Post model
 module.exports = {
-    PostModel
+    Post
 }
