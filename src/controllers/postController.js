@@ -37,9 +37,25 @@ async function createPost(req, res) {
     }
 }
 
+// Update - Update a post
+// async function updatePost(req, res) {
+//     try{
+//         const { id } = req.params;  // Get the post ID from the request parameters
+//         const { title, content } = req.body;  // Get the title and content from the request body
+//         const post = await Post.findByIdAndUpdate(id, { title, content }, { new: true });  // Find the post by ID and update it
+//         res.json(post);  // Return the updated post
+//     } catch (error) {
+//         res
+//         .status(500)
+//         .json({
+//             message: error.message
+//         });
+//     }
+// }
 
  // Export the functions
 module.exports = {
     getAllPosts,
-    createPost
+    createPost,
+    updatePost
 }; 

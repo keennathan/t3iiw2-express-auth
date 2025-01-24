@@ -8,6 +8,12 @@ const postRoutes = require('./routes/postRoutes.js');  // Import the postRoutes 
 const app = express();  // Create an Express application
 
 app.use(cors());  // Enable CORS
+let corsOptions = {
+    origin: ["http://localhost:3000", "http://localhost:5173", "http://127.0.0.1:5173", "https://reactapp.com"],
+    methods: ["GET", "POST"]
+};
+app.use(cors(corsOptions));  // Enable CORS with options
+
 app.use(helmet());  // Enable Helmet
 app.use(express.json());  // Enable JSON parsing
 
