@@ -56,6 +56,5 @@ async function createPost(req, res) {
  // Export the functions
 module.exports = {
     getAllPosts,
-    createPost,
-    updatePost
+    createPost
 }; 
